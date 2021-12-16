@@ -41,11 +41,14 @@ var playGame = function (){
         losses++;
         alert('You have lost!')
     }
+
+    alert('Stats: \n Wins = ' + wins + '\nLosses = ' + losses + '\nTies = ' + ties)
+
+    var playAgain = confirm('Play Again?')
+
+    if (playAgain){
+        playGame()
+    }
 }
 
-
-//alert for stats 
-window.alert()
-
-//confirm if want to play again - need a loop until stop playing
-window.confirm('Would you like to play again?')
+playGame()
