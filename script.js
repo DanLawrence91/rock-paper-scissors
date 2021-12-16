@@ -7,26 +7,45 @@
 //then need alert to show stats
 //then need confirm to see if play a second round
 
-
-//if user put R and computer put S user wins, if comp selects P comp wins and if comp selects R its a tie
-//if user puts P and comp puts R user wins, if comp selects S comp wins and if comp selects P its a tie
-//if user puts S and comp puts P user wins, if comp selects R comp wins and if comp selects S its a tie
-
+let wins = 0
+let losses = 0
+let ties = 0
 //array for options
 let options = ['R', 'P', 'S'];
 
-//variables for user and computer 
-let player1 = 'User'
-let player2 = 'Computer'
+var playGame = function (){
+    var userChoice = prompt('Enter R, P or S')
 
-//prompt for user selection
-prompt("Please select R, P or S")
+    if(!userChoice){
+        return;
+    }
 
-//alert for computer selection
-window.alert('Computer has selected ')
+    userChoice = userChoice.toUpperCase();
+
+    var index = Math.floor(Math.random() * options.length);
+    var compChoice = options[index];
+
+    alert('The cmputer chose ' + compChoice)
+
+    if (userChoice === compChoice){
+        ties++;
+        alert('This is a tie');
+    } else if (
+        (userChoice === 'R' && compChoice === 'S') ||
+        (userChoice === 'S' && compChoice === 'P') ||
+        (userChoice === 'P' && compChoice === 'R')
+    ) {
+        wins++;
+        alert('You have won!')
+    } else {
+        losses++;
+        alert('You have lost!')
+    }
+}
+
 
 //alert for stats 
 window.alert()
 
-//confirm if want to play again
+//confirm if want to play again - need a loop until stop playing
 window.confirm('Would you like to play again?')
