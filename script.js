@@ -13,27 +13,27 @@ let ties = 0
 //array for options
 let options = ['R', 'P', 'S'];
 
-var playGame = function (){
-    var userChoice = prompt('Enter R, P or S')
+var match = function (){
+    var userOption = prompt('Enter R, P or S')
 
-    if(!userChoice){
+    if(!userOption){
         return;
     }
 
-    userChoice = userChoice.toUpperCase();
+    userOption = userOption.toUpperCase();
 
     var index = Math.floor(Math.random() * options.length);
-    var compChoice = options[index];
+    var compOption = options[index];
 
-    alert('The computer chose ' + compChoice)
+    alert('The computer chose ' + compOption)
 
-    if (userChoice === compChoice){
+    if (userOption === compOption){
         ties++;
         alert('This is a tie');
     } else if (
-        (userChoice === 'R' && compChoice === 'S') ||
-        (userChoice === 'S' && compChoice === 'P') ||
-        (userChoice === 'P' && compChoice === 'R')
+        (userOption === 'R' && compOption === 'S') ||
+        (userOption === 'S' && compOption === 'P') ||
+        (userOption === 'P' && compOption === 'R')
     ) {
         wins++;
         alert('You have won!')
@@ -42,13 +42,13 @@ var playGame = function (){
         alert('You have lost!')
     }
 
-    alert('Stats: \n Wins = ' + wins + '\nLosses = ' + losses + '\nTies = ' + ties)
+    alert('Stats: \nWins = ' + wins + '\nLosses = ' + losses + '\nTies = ' + ties)
 
-    var playAgain = confirm('Play Again?')
+    var nextRound = confirm('Do you want to play another game?')
 
-    if (playAgain){
-        playGame()
+    if (nextRound){
+        match()
     }
 }
 
-playGame()
+match()
