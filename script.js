@@ -25,7 +25,7 @@ var playGame = function (){
     var index = Math.floor(Math.random() * options.length);
     var compChoice = options[index];
 
-    alert('The cmputer chose ' + compChoice)
+    alert('The computer chose ' + compChoice)
 
     if (userChoice === compChoice){
         ties++;
