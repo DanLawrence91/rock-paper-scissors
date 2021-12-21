@@ -47,13 +47,13 @@ var rPS = function(){
     }
 
     //log stats for games played
-    alert("Stats: Wins = " + wins + "\nLosses = " + losses + "\n Ties = " + ties);
+    alert("Stats: \nWins = " + wins + "\nLosses = " + losses + "\nTies = " + ties);
 
     //ask user if they want to play again
     confirm("Do you want to play again?");
 
     //if confirm is true game restarts
-    if (confirm){
+    if (confirm === true){
         rPS()
     } else {
         return;
