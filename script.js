@@ -55,6 +55,8 @@ var rPS = function(){
     //if confirm is true game restarts
     if (confirm){
         rPS()
+    } else {
+        return;
     };
         
 }
