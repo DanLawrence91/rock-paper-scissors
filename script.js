@@ -35,7 +35,7 @@ var rPS = function(){
     alert("The computer has chosen " + compChoice);
 
     //results returned depending on what selections have been made by user and computer
-    if ((userChoice === "R" && compChoice === "S") || (userChoice === "p" && compChoice === "R") || (userChoice === "R" && compChoice === "S")) { 
+    if ((userChoice === "R" && compChoice === "S") || (userChoice === "P" && compChoice === "R") || (userChoice === "S" && compChoice === "P")) { 
         wins++;
         alert("You have won this game");
     } else if (userChoice === compChoice){
