@@ -50,16 +50,18 @@ var rPS = function(){
     alert("Stats: \nWins = " + wins + "\nLosses = " + losses + "\nTies = " + ties);
 
     //ask user if they want to play again
-    confirm("Do you want to play again?");
+    var confirmAgain = confirm("Do you want to play again?");
 
     //if confirm is true game restarts
-    if (confirm === true){
+    if (confirmAgain === true){
         rPS()
     } else {
         return;
-    };
+    }
         
 }
+
+
 
 //call function to start game
 rPS()
