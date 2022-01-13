@@ -1,4 +1,4 @@
-# week-3-mini-project
+# Rock, Paper, Scissors
 
 ## Description
 
